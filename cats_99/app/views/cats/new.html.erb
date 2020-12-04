@@ -1,0 +1,37 @@
+<% require '/home/srai/App Academy/w6d5/cats_99/app/models/cat.rb'%>
+<h1> Add A New Cat </h1>
+
+<form action="/cats" method="post">
+    <label for="name">Name</label>
+    <input id="name" type="text" name="cat[name]" >
+    <br>
+    <label for="birth_date">Birth Date</label>
+    <input id="birth_date" type="date" name="cat[birth_date]">
+    <br>
+    
+    <label for="color">Color</label>
+    <select name="cat[color]">
+        <option disabled selected >Please Select</option>
+        <option value="black"><%=CAT_COLORS[0].upcase%></option>
+        <option value="white">White</option>
+        <option value="orange">Orange</option>
+        <option value="gray">Gray</option>
+        <option value="brown">Brown</option>
+    </select>
+    
+    <br>
+    <label for="sex">Sex</label>
+
+    <input checked type="radio" id="Male" value="M" name="cat[sex]"  >
+    <label for="Male">Male</label>
+    <input type="radio" id="Female" value="F" name="cat[sex]">
+    <label for="Female">Female</label>
+
+
+    <br>
+    <label for="description">Description</label>
+    <textarea name="cat[description]">Enter Your Description Here</textarea>
+
+    <br>
+    <input type="Submit" value="Add your Cat">
+    </form >
